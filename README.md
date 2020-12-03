@@ -44,4 +44,6 @@ What is the number you want to find the square root of? 16
 The Answer is: 4
 ```
 
-If it doesn't work, then <font size=30>L</font>
+If it doesn't work, then
+
+## L.
