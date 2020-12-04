@@ -77,3 +77,24 @@ elif action == "square root":
     else:
         squ_root = sqrt(float(square_root))
         print(f'The Answer is: {squ_root}')
+elif action == "pythagorean theorem":
+    altitude__y_or_no = input("Do you have the altitude? ")
+    base__y_or_no = input("Do you have the base? ")
+    hypotenuse__y_or_no = input("Do you have the hypotenuse? ")
+    answer = None
+    altitude = None
+    base = None
+    hypotenuse = None
+    if altitude__y_or_no == "yes":
+        altitude = input("What is the altitude? ")
+    if base__y_or_no == "yes":
+        base = input("What is the base? ")
+    if hypotenuse__y_or_no == "yes":
+        hypotenuse = input("What is the hypotenuse? ")
+    if altitude__y_or_no == "yes" and base__y_or_no == "yes" and hypotenuse__y_or_no == "no":
+        answer = sqrt((float(altitude) * float(altitude)) + (float(base) * float(base)))
+    elif hypotenuse__y_or_no == "yes" and base__y_or_no == "yes" and altitude__y_or_no == "no": 
+        answer = sqrt((float(hypotenuse) * float(hypotenuse)) - (float(base) * float(base)))
+    elif hypotenuse__y_or_no == "yes" and altitude__y_or_no == "yes" and base__y_or_no == "no":
+        answer = sqrt((float(hypotenuse) * float(hypotenuse)) - (float(altitude) * float(altitude)))
+    print(f'The Answer Is: {answer}')
