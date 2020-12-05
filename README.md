@@ -20,7 +20,7 @@ When it asks for shapes, your options are `Square` and `Rectangle` length/breadt
 
 For `Square Root` and `Square` its basically just the same thing, enter a number.
 
-For `Pythagorean Theorem` (This is the most complex but still pretty easy) you gotta input the state of the 3 sides of the triangle. Basically defining whether it's there or not, You do this using `yes` or `no`. Once the script gets this info, it will ask you the numbers according to the presence of each side of the triangle. If you dont know what the altitude is, then it's not going to ask you what it is. Once you do this, the answer will be outputted in square root(obviously). If hypotenuse is there, then make sure that the value is larger than the base/altitude otherwise it just wont make sense.
+For `Pythagorean Theorem` (This is the most complex but still pretty easy) you gotta input the state of the 3 sides of the triangle. Basically defining whether it's there or not, You do this using `yes` or `no`. Once the script gets this info, it will ask you the numbers according to the presence of each side of the triangle. If you dont know what the altitude is, then it's not going to ask you what it is. Once you do this, the answer will be outputted in square root(obviously). If hypotenuse is there, then make sure that the value is larger than the base/altitude otherwise it just wont make sense. And also, don't try and fake it out by saying that you have all 3 sides, It Knows.
 
 You can also `quit` at any point while using the script if you would like to stop. Just type `quit`.
 

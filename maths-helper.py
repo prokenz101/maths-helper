@@ -93,8 +93,13 @@ elif action == "pythagorean theorem":
         hypotenuse = input("What is the hypotenuse? ")
     if altitude__y_or_no == "yes" and base__y_or_no == "yes" and hypotenuse__y_or_no == "no":
         answer = sqrt((float(altitude) * float(altitude)) + (float(base) * float(base)))
+        print(f'The Answer Is: {answer}')
     elif hypotenuse__y_or_no == "yes" and base__y_or_no == "yes" and altitude__y_or_no == "no": 
         answer = sqrt((float(hypotenuse) * float(hypotenuse)) - (float(base) * float(base)))
+        print(f'The Answer Is: {answer}')
     elif hypotenuse__y_or_no == "yes" and altitude__y_or_no == "yes" and base__y_or_no == "no":
         answer = sqrt((float(hypotenuse) * float(hypotenuse)) - (float(altitude) * float(altitude)))
-    print(f'The Answer Is: {answer}')
+        print(f'The Answer Is: {answer}')
+    elif hypotenuse__y_or_no == "yes" and altitude__y_or_no == "yes" and base__y_or_no == "yes":
+        print("Why are you asking me if you already have all 3 sides?")
+    
