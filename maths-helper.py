@@ -1,4 +1,5 @@
-from math import sqrt
+from math import pi, sqrt
+number_pi = pi
 action = input("What do you want me to do? ")
 
 if action == "calculator":
@@ -29,10 +30,10 @@ if action == "calculator":
         print('Answer is: ' + str(answer))
 elif action == "perimeter":
     peri_answer = 0
-    rec_or_squ = input("Square or Rectangle? ")
-    if rec_or_squ == "quit":
+    rec_or_squ_or_cir = input("Square or Rectangle or Circle? ")
+    if rec_or_squ_or_cir == "quit":
         exit()
-    if rec_or_squ == "rectangle":
+    if rec_or_squ_or_cir == "rectangle":
         rec_leng = input("What is the length of the rectangle? ")
         if rec_leng == "quit":
             exit()
@@ -41,20 +42,26 @@ elif action == "perimeter":
             exit()
         peri_answer = 2 * (float(rec_leng) + float(rec_brea))
         print(f'The Answer is: {peri_answer} units')
-    elif rec_or_squ == "square":
+    elif rec_or_squ_or_cir == "square":
         squ_side = input("What is the side of the square? ")
         if squ_side == "quit":
             exit()
         peri_answer = float(squ_side) * 4
         print("The Answer is: " + str(peri_answer)+(" units"))
+    elif rec_or_squ_or_cir == "circle":
+        cir_radi = input("What is the radius of the circle? ")
+        if cir_radi == "quit":
+            exit()
+        peri_answer = number_pi * float(cir_radi) * float(cir_radi)
+        print(f'The Answer Is: {peri_answer}')
 elif action == "area":
     area_answer = 0
-    area__rec_or_squ = input("Square or Rectangle? ")
-    if area__rec_or_squ == "quit":
+    area__rec_or_squ_or_cir = input("Square or Rectangle or Circle? ")
+    if area__rec_or_squ_or_cir == "quit":
         exit()
     else:
-        if area__rec_or_squ == "rectangle":
-            if area__rec_or_squ == "quit":
+        if area__rec_or_squ_or_cir == "rectangle":
+            if area__rec_or_squ_or_cir == "quit":
                 exit()
             area__rec_leng = input("What is the length of the rectangle? ")
             if area__rec_leng == "quit":
@@ -64,12 +71,18 @@ elif action == "area":
                 exit()
             area_answer = float(area__rec_leng) * float(area__rec_brea)
             print("The Answer is: " + str(area_answer) + (" square units"))
-        elif area__rec_or_squ == "square":
+        elif area__rec_or_squ_or_cir == "square":
             area__squ_side = input("What is the side of the square? ")
             if area__squ_side == "quit":
                 exit()
             area_answer = float(area__squ_side) * float(area__squ_side)
             print("The Answer is: " + str(area_answer) + (" square units"))
+        elif area__rec_or_squ_or_cir == "circle":
+            area_diam = input("What is the diameter of the circle? ")
+            if area_diam == "quit":
+                exit()
+            area_answer = (pi/4) * float(area_diam) * float(area_diam)
+            print(f'The Answer Is: {area_answer} square units')
 elif action == "square root":
     square_root = input("What is the number you want to find the square root of? ")
     if square_root == "quit":
