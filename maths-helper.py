@@ -110,6 +110,10 @@ elif action == "square root":
     else:
         squ_root = sqrt(float(square_root))
         print(f'The Answer is: {squ_root}')
+elif action == "cube root":
+    cube_root = input("What is the number that you want me to find the cube root of? ")
+    cube_root_answer = float(cube_root) ** (1/3)
+    print(f'The Answer Is: {cube_root_answer}')
 elif action == "pythagorean theorem":
     altitude__y_or_no = input("Do you have the altitude? ")
     base__y_or_no = input("Do you have the base? ")
