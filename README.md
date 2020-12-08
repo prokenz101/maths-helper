@@ -16,7 +16,7 @@ A simple python script that helps you with basic math questions.
 When it asks for a command, Your options are `calculator`, `perimeter`, `area`, `square`, `square root`, `quit` and ` pythagorean theorem`.
 The operations for `calculator` are `+` (Addition), `-` (Subtraction), `*` (Multiplication), `/` (Division) and `%` (Remainder).
 
-When it asks for shapes, your options are `Square`, `Rectangle`, `Circle` length/breadth/side/radius/diameter in `perimeter` or `area` just input a random number I guess its not that hard. `Triangle` and `Parallelogram` are exclusive to area for now, but that should change fairly soon.
+When it asks for shapes, your options are `Square`, `Rectangle`, `Circle`, `Triangle` and `Parallelogram`  length/breadth/side/radius/diameter/base in `perimeter` or `area` just input a random number I guess its not that hard.
 
 For `Square Root` and `Square` its basically just the same thing, enter a number.
 
