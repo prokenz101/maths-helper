@@ -29,10 +29,10 @@ if action == "calculator":
         print('Answer is: ' + str(answer))
 elif action == "perimeter":
     peri_answer = 0
-    rec_or_squ_or_cir = input("Square or Rectangle or Circle? ")
-    if rec_or_squ_or_cir == "quit":
+    rec_or_squ_or_cir_or_tria_or_paral = input("Square or Rectangle or Circle or Triangle or Parallelogram? ")
+    if rec_or_squ_or_cir_or_tria_or_paral == "quit":
         exit()
-    if rec_or_squ_or_cir == "rectangle":
+    if rec_or_squ_or_cir_or_tria_or_paral == "rectangle":
         rec_leng = input("What is the length of the rectangle? ")
         if rec_leng == "quit":
             exit()
@@ -41,18 +41,28 @@ elif action == "perimeter":
             exit()
         peri_answer = 2 * (float(rec_leng) + float(rec_brea))
         print(f'The Answer is: {peri_answer} units')
-    elif rec_or_squ_or_cir == "square":
+    elif rec_or_squ_or_cir_or_tria_or_paral == "square":
         squ_side = input("What is the side of the square? ")
         if squ_side == "quit":
             exit()
         peri_answer = float(squ_side) * 4
         print("The Answer is: " + str(peri_answer)+(" units"))
-    elif rec_or_squ_or_cir == "circle":
+    elif rec_or_squ_or_cir_or_tria_or_paral == "circle":
         cir_radi = input("What is the radius of the circle? ")
         if cir_radi == "quit":
             exit()
         peri_answer = pi * float(cir_radi) * float(cir_radi)
         print(f'The Answer Is: {peri_answer}')
+    elif rec_or_squ_or_cir_or_tria_or_paral == "triangle":
+        tria_base_peri = input("What is the base of the triangle? ")
+        tria_side_peri = input("What is the side of the triangle? ")
+        tria_peri = float(tria_base_peri) + float(tria_side_peri) + float(tria_side_peri)
+        print(f'The Answer Is: {tria_peri}')
+    elif rec_or_squ_or_cir_or_tria_or_paral == "parallelogram":
+        paral_base_peri = input("What is the base of the parallelogram? ")
+        paral_side_peri = input("What is the side of the parallelogram? ")
+        paral_peri = 2*(float(paral_base_peri) + float(paral_side_peri))
+        print(f'The Answer Is: {paral_peri}')
 elif action == "area":
     area_answer = 0
     area__rec_or_squ_or_cir_or_tria_or_paral = input("Square or Rectangle or Circle or Triangle or Parallelogram? ")
