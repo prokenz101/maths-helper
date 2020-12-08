@@ -1,5 +1,4 @@
-from math import pi, sqrt
-number_pi = pi
+from math import pi, sqrt 
 action = input("What do you want me to do? ")
 
 if action == "calculator":
@@ -52,16 +51,16 @@ elif action == "perimeter":
         cir_radi = input("What is the radius of the circle? ")
         if cir_radi == "quit":
             exit()
-        peri_answer = number_pi * float(cir_radi) * float(cir_radi)
+        peri_answer = pi * float(cir_radi) * float(cir_radi)
         print(f'The Answer Is: {peri_answer}')
 elif action == "area":
     area_answer = 0
-    area__rec_or_squ_or_cir = input("Square or Rectangle or Circle? ")
-    if area__rec_or_squ_or_cir == "quit":
+    area__rec_or_squ_or_cir_or_tria_or_paral = input("Square or Rectangle or Circle or Triangle or Parallelogram? ")
+    if area__rec_or_squ_or_cir_or_tria_or_paral == "quit":
         exit()
     else:
-        if area__rec_or_squ_or_cir == "rectangle":
-            if area__rec_or_squ_or_cir == "quit":
+        if area__rec_or_squ_or_cir_or_tria_or_paral == "rectangle":
+            if area__rec_or_squ_or_cir_or_tria_or_paral == "quit":
                 exit()
             area__rec_leng = input("What is the length of the rectangle? ")
             if area__rec_leng == "quit":
@@ -70,21 +69,32 @@ elif action == "area":
             if area__rec_brea == "quit":
                 exit()
             area_answer = float(area__rec_leng) * float(area__rec_brea)
-            print("The Answer is: " + str(area_answer) + (" square units"))
-        elif area__rec_or_squ_or_cir == "square":
+            print("The Answer is: " + str(area_answer) + (" square unit(s)"))
+        elif area__rec_or_squ_or_cir_or_tria_or_paral == "square":
             area__squ_side = input("What is the side of the square? ")
             if area__squ_side == "quit":
                 exit()
             area_answer = float(area__squ_side) * float(area__squ_side)
-            print("The Answer is: " + str(area_answer) + (" square units"))
-        elif area__rec_or_squ_or_cir == "circle":
+            print("The Answer is: " + str(area_answer) + (" square unit(s)"))
+        elif area__rec_or_squ_or_cir_or_tria_or_paral == "circle":
             area_diam = input("What is the diameter of the circle? ")
             if area_diam == "quit":
                 exit()
             area_answer = (pi/4) * float(area_diam) * float(area_diam)
-            print(f'The Answer Is: {area_answer} square units')
+            print(f'The Answer Is: {area_answer} square unit(s)')
+        elif area__rec_or_squ_or_cir_or_tria_or_paral == "triangle":
+            tria_height = input("What is the height of the triangle? ")
+            tria_base = input("What is the base of the triangle? ")
+            tria_area = (float(tria_height)*float(tria_base))/2
+            print(f'The Answer Is: {tria_area} sq unit(s)')
+        elif area__rec_or_squ_or_cir_or_tria_or_paral == "parallelogram":
+            paral_height = input("What is the height of the parallelogram? ")
+            paral_base = input("What is the base of the parallelogram? ")
+            paral_area = float(paral_height)*float(paral_base)
+            print(f'The Answer Is: {paral_area} sq unit(s)')
 elif action == "square root":
-    square_root = input("What is the number you want to find the square root of? ")
+    square_root = input(
+        "What is the number you want to find the square root of? ")
     if square_root == "quit":
         exit()
     else:
@@ -105,14 +115,16 @@ elif action == "pythagorean theorem":
     if hypotenuse__y_or_no == "yes":
         hypotenuse = input("What is the hypotenuse? ")
     if altitude__y_or_no == "yes" and base__y_or_no == "yes" and hypotenuse__y_or_no == "no":
-        answer = sqrt((float(altitude) * float(altitude)) + (float(base) * float(base)))
+        answer = sqrt((float(altitude) * float(altitude)) +
+                      (float(base) * float(base)))
         print(f'The Answer Is: {answer}')
-    elif hypotenuse__y_or_no == "yes" and base__y_or_no == "yes" and altitude__y_or_no == "no": 
-        answer = sqrt((float(hypotenuse) * float(hypotenuse)) - (float(base) * float(base)))
+    elif hypotenuse__y_or_no == "yes" and base__y_or_no == "yes" and altitude__y_or_no == "no":
+        answer = sqrt((float(hypotenuse) * float(hypotenuse)) -
+                      (float(base) * float(base)))
         print(f'The Answer Is: {answer}')
     elif hypotenuse__y_or_no == "yes" and altitude__y_or_no == "yes" and base__y_or_no == "no":
-        answer = sqrt((float(hypotenuse) * float(hypotenuse)) - (float(altitude) * float(altitude)))
+        answer = sqrt((float(hypotenuse) * float(hypotenuse)) -
+                      (float(altitude) * float(altitude)))
         print(f'The Answer Is: {answer}')
     elif hypotenuse__y_or_no == "yes" and altitude__y_or_no == "yes" and base__y_or_no == "yes":
         print("Why are you asking me if you already have all 3 sides?")
-    
