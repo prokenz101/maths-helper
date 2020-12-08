@@ -142,3 +142,5 @@ elif action == "pythagorean theorem":
         print(f'The Answer Is: {answer}')
     elif hypotenuse__y_or_no == "yes" and altitude__y_or_no == "yes" and base__y_or_no == "yes":
         print("Why are you asking me if you already have all 3 sides?")
+else:
+    print("Didn't quite catch that. Try looking at the README on the GitHub page if you don't understand.")
