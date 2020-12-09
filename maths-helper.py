@@ -1,7 +1,7 @@
 from math import pi, sqrt
 action = input("What do you want me to do? ")
 useable_commands = ['The Useable Commands are:', 'calculator',
-                    'perimeter', 'area', 'square root', 'cube root', 'pythagorean theorem']
+                    'perimeter / p', 'area / a', 'square root / s', 'cube root / cr', 'pythagorean theorem / pt']
 
 if action == "help":
     print("Need Help? Try 'commands' for a list of commands.")
@@ -10,7 +10,7 @@ if action == "commands":
     for displayed_commands in useable_commands:
         print(displayed_commands)
 
-if action == "calculator":
+if action == "calculator" or action == "c":
     operation = input("Operation? ")
     if operation == "quit":
         exit()
@@ -36,7 +36,7 @@ if action == "calculator":
     elif operation == "%":
         answer = float(num1) % float(num2)
         print('Answer is: ' + str(answer))
-elif action == "perimeter":
+elif action == "perimeter" or action == "p":
     peri_answer = 0
     rec_or_squ_or_cir_or_tria_or_paral = input(
         "Square or Rectangle or Circle or Triangle or Parallelogram? ")
@@ -74,7 +74,7 @@ elif action == "perimeter":
         paral_side_peri = input("What is the side of the parallelogram? ")
         paral_peri = 2*(float(paral_base_peri) + float(paral_side_peri))
         print(f'The Answer Is: {paral_peri}')
-elif action == "area":
+elif action == "area" or action == "a":
     area_answer = 0
     area__rec_or_squ_or_cir_or_tria_or_paral = input(
         "Square or Rectangle or Circle or Triangle or Parallelogram? ")
@@ -114,7 +114,7 @@ elif action == "area":
             paral_base = input("What is the base of the parallelogram? ")
             paral_area = float(paral_height)*float(paral_base)
             print(f'The Answer Is: {paral_area} sq unit(s)')
-elif action == "square root":
+elif action == "square root" or action == "s":
     square_root = input(
         "What is the number you want to find the square root of? ")
     if square_root == "quit":
@@ -122,12 +122,12 @@ elif action == "square root":
     else:
         squ_root = sqrt(float(square_root))
         print(f'The Answer is: {squ_root}')
-elif action == "cube root":
+elif action == "cube root" or action == "cr":
     cube_root = input(
         "What is the number that you want me to find the cube root of? ")
     cube_root_answer = float(cube_root) ** (1/3)
     print(f'The Answer Is: {cube_root_answer}')
-elif action == "pythagorean theorem":
+elif action == "pythagorean theorem" or action == "pt":
     altitude__y_or_no = input("Do you have the altitude? ")
     base__y_or_no = input("Do you have the base? ")
     hypotenuse__y_or_no = input("Do you have the hypotenuse? ")
