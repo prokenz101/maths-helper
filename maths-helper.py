@@ -6,11 +6,13 @@ useable_commands = ['The Useable Commands are:', 'calculator',
 if action == "help":
     print("Need Help? Try 'commands' for a list of commands.")
     print("If you still need help, then go to github.com/prokenz101/maths-helper and read the README.md.")
+
+
 if action == "commands":
     for displayed_commands in useable_commands:
         print(displayed_commands)
 
-if action == "calculator" or action == "c":
+elif action == "calculator" or action == "c":
     operation = input("Operation? ")
     if operation == "quit":
         exit()
@@ -155,3 +157,5 @@ elif action == "pythagorean theorem" or action == "pt":
         print(f'The Answer Is: {answer}')
     elif hypotenuse__y_or_no == "yes" and altitude__y_or_no == "yes" and base__y_or_no == "yes":
         print("Why are you asking me if you already have all 3 sides?")
+else:
+    print("Try running 'help'")
