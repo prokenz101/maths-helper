@@ -3,10 +3,12 @@ action = input("What do you want me to do? ")
 useable_commands = ['The Useable Commands are:', 'calculator',
                     'perimeter', 'area', 'square root', 'cube root', 'pythagorean theorem']
 
+if action == "help":
+    print("Need Help? Try 'commands' for a list of commands.")
+    print("If you still need help, then go to github.com/prokenz101/maths-helper and read the README.md.")
 if action == "commands":
     for displayed_commands in useable_commands:
         print(displayed_commands)
-        
 
 if action == "calculator":
     operation = input("Operation? ")
