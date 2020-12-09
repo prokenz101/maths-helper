@@ -1,5 +1,12 @@
-from math import pi, sqrt 
+from math import pi, sqrt
 action = input("What do you want me to do? ")
+useable_commands = ['The Useable Commands are:', 'calculator',
+                    'perimeter', 'area', 'square root', 'cube root', 'pythagorean theorem']
+
+if action == "commands":
+    for displayed_commands in useable_commands:
+        print(displayed_commands)
+        
 
 if action == "calculator":
     operation = input("Operation? ")
@@ -29,7 +36,8 @@ if action == "calculator":
         print('Answer is: ' + str(answer))
 elif action == "perimeter":
     peri_answer = 0
-    rec_or_squ_or_cir_or_tria_or_paral = input("Square or Rectangle or Circle or Triangle or Parallelogram? ")
+    rec_or_squ_or_cir_or_tria_or_paral = input(
+        "Square or Rectangle or Circle or Triangle or Parallelogram? ")
     if rec_or_squ_or_cir_or_tria_or_paral == "quit":
         exit()
     if rec_or_squ_or_cir_or_tria_or_paral == "rectangle":
@@ -56,7 +64,8 @@ elif action == "perimeter":
     elif rec_or_squ_or_cir_or_tria_or_paral == "triangle":
         tria_base_peri = input("What is the base of the triangle? ")
         tria_side_peri = input("What is the side of the triangle? ")
-        tria_peri = float(tria_base_peri) + float(tria_side_peri) + float(tria_side_peri)
+        tria_peri = float(tria_base_peri) + \
+            float(tria_side_peri) + float(tria_side_peri)
         print(f'The Answer Is: {tria_peri}')
     elif rec_or_squ_or_cir_or_tria_or_paral == "parallelogram":
         paral_base_peri = input("What is the base of the parallelogram? ")
@@ -65,7 +74,8 @@ elif action == "perimeter":
         print(f'The Answer Is: {paral_peri}')
 elif action == "area":
     area_answer = 0
-    area__rec_or_squ_or_cir_or_tria_or_paral = input("Square or Rectangle or Circle or Triangle or Parallelogram? ")
+    area__rec_or_squ_or_cir_or_tria_or_paral = input(
+        "Square or Rectangle or Circle or Triangle or Parallelogram? ")
     if area__rec_or_squ_or_cir_or_tria_or_paral == "quit":
         exit()
     else:
@@ -111,7 +121,8 @@ elif action == "square root":
         squ_root = sqrt(float(square_root))
         print(f'The Answer is: {squ_root}')
 elif action == "cube root":
-    cube_root = input("What is the number that you want me to find the cube root of? ")
+    cube_root = input(
+        "What is the number that you want me to find the cube root of? ")
     cube_root_answer = float(cube_root) ** (1/3)
     print(f'The Answer Is: {cube_root_answer}')
 elif action == "pythagorean theorem":
@@ -142,5 +153,3 @@ elif action == "pythagorean theorem":
         print(f'The Answer Is: {answer}')
     elif hypotenuse__y_or_no == "yes" and altitude__y_or_no == "yes" and base__y_or_no == "yes":
         print("Why are you asking me if you already have all 3 sides?")
-else:
-    print("Didn't quite catch that. Try looking at the README on the GitHub page if you don't understand.")
