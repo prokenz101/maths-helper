@@ -1,4 +1,4 @@
-from math import pi, sqrt
+from math import pi, sqrt, gcd
 action = input("What do you want me to do? ")
 useable_commands = ['The Useable Commands are:', 'calculator',
                     'perimeter / p', 'area / a', 'square root / s', 'cube root / cr', 'pythagorean theorem / pt']
@@ -6,12 +6,11 @@ useable_commands = ['The Useable Commands are:', 'calculator',
 if action == "help":
     print("Need Help? Try 'commands' for a list of commands.")
     print("If you still need help, then go to github.com/prokenz101/maths-helper and read the README.md.")
-
-
+if action == "q" or action == "quit":
+    exit()
 if action == "commands":
     for displayed_commands in useable_commands:
         print(displayed_commands)
-
 elif action == "calculator" or action == "c":
     operation = input("Operation? ")
     if operation == "quit":
@@ -157,5 +156,16 @@ elif action == "pythagorean theorem" or action == "pt":
         print(f'The Answer Is: {answer}')
     elif hypotenuse__y_or_no == "yes" and altitude__y_or_no == "yes" and base__y_or_no == "yes":
         print("Why are you asking me if you already have all 3 sides?")
+elif action == "HCF" or action == "hcf":
+    hcf__fir_num = input("What is the first number? ")
+    if hcf__fir_num == "quit" or hcf__fir_num == "q":
+        exit()
+    else:
+        hcf__sec_num = input("What is the second number? ")
+    if hcf__sec_num == "quit" or hcf__sec_num == "q":
+        exit()
+    else:
+        hcf_answer = gcd(int(hcf__fir_num), int(hcf__sec_num))
+    print(f'The Answer Is {hcf_answer}')
 else:
     print("Try running 'help'")
