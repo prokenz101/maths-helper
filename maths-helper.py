@@ -11,9 +11,9 @@ if action == "q" or action == "quit":
 if action == "commands":
     for displayed_commands in useable_commands:
         print(displayed_commands)
-elif action == "calculator" or action == "c":
-    operation = input("Operation? ")
-    if operation == "quit":
+while action == "calculator" or action == "c":
+    operation = input("Operation? Press Q to quit. ")
+    if operation == "quit" or operation == "q":
         exit()
     num1 = input("What is the first number? ")
     if num1 == "quit":
@@ -37,30 +37,30 @@ elif action == "calculator" or action == "c":
     elif operation == "%":
         answer = float(num1) % float(num2)
         print('Answer is: ' + str(answer))
-elif action == "perimeter" or action == "p":
+while action == "perimeter" or action == "p":
     peri_answer = 0
     rec_or_squ_or_cir_or_tria_or_paral = input(
-        "Square or Rectangle or Circle or Triangle or Parallelogram? ")
-    if rec_or_squ_or_cir_or_tria_or_paral == "quit":
+        "Square or Rectangle or Circle or Triangle or Parallelogram? Press Q to quit. ")
+    if rec_or_squ_or_cir_or_tria_or_paral == "quit" or rec_or_squ_or_cir_or_tria_or_paral == "q":
         exit()
     if rec_or_squ_or_cir_or_tria_or_paral == "rectangle":
         rec_leng = input("What is the length of the rectangle? ")
-        if rec_leng == "quit":
+        if rec_leng == "quit" or rec_leng == "q":
             exit()
         rec_brea = input("What is the breadth of the rectangle? ")
-        if rec_brea == "quit":
+        if rec_brea == "quit" or rec_brea == "q":
             exit()
         peri_answer = 2 * (float(rec_leng) + float(rec_brea))
         print(f'The Answer is: {peri_answer} units')
     elif rec_or_squ_or_cir_or_tria_or_paral == "square":
         squ_side = input("What is the side of the square? ")
-        if squ_side == "quit":
+        if squ_side == "quit" or squ_side == "q":
             exit()
         peri_answer = float(squ_side) * 4
         print("The Answer is: " + str(peri_answer)+(" units"))
     elif rec_or_squ_or_cir_or_tria_or_paral == "circle":
         cir_radi = input("What is the radius of the circle? ")
-        if cir_radi == "quit":
+        if cir_radi == "quit" or cir_radi == "q":
             exit()
         peri_answer = pi * float(cir_radi) * float(cir_radi)
         print(f'The Answer Is: {peri_answer}')
@@ -75,33 +75,33 @@ elif action == "perimeter" or action == "p":
         paral_side_peri = input("What is the side of the parallelogram? ")
         paral_peri = 2*(float(paral_base_peri) + float(paral_side_peri))
         print(f'The Answer Is: {paral_peri}')
-elif action == "area" or action == "a":
+while action == "area" or action == "a":
     area_answer = 0
     area__rec_or_squ_or_cir_or_tria_or_paral = input(
-        "Square or Rectangle or Circle or Triangle or Parallelogram? ")
-    if area__rec_or_squ_or_cir_or_tria_or_paral == "quit":
+        "Square or Rectangle or Circle or Triangle or Parallelogram? Press Q to quit. ")
+    if area__rec_or_squ_or_cir_or_tria_or_paral == "quit" or area__rec_or_squ_or_cir_or_tria_or_paral == "q":
         exit()
     else:
         if area__rec_or_squ_or_cir_or_tria_or_paral == "rectangle":
-            if area__rec_or_squ_or_cir_or_tria_or_paral == "quit":
+            if area__rec_or_squ_or_cir_or_tria_or_paral == "quit" or area__rec_or_squ_or_cir_or_tria_or_paral == "q":
                 exit()
             area__rec_leng = input("What is the length of the rectangle? ")
-            if area__rec_leng == "quit":
+            if area__rec_leng == "quit" or area__rec_leng == "q":
                 exit()
             area__rec_brea = input("What is the breadth of the rectangle? ")
-            if area__rec_brea == "quit":
+            if area__rec_brea == "quit" or area__rec_brea == "q":
                 exit()
             area_answer = float(area__rec_leng) * float(area__rec_brea)
             print("The Answer is: " + str(area_answer) + (" square unit(s)"))
         elif area__rec_or_squ_or_cir_or_tria_or_paral == "square":
             area__squ_side = input("What is the side of the square? ")
-            if area__squ_side == "quit":
+            if area__squ_side == "quit" or area__squ_side == "q":
                 exit()
             area_answer = float(area__squ_side) * float(area__squ_side)
             print("The Answer is: " + str(area_answer) + (" square unit(s)"))
         elif area__rec_or_squ_or_cir_or_tria_or_paral == "circle":
             area_diam = input("What is the diameter of the circle? ")
-            if area_diam == "quit":
+            if area_diam == "quit" or area_diam == "q":
                 exit()
             area_answer = (pi/4) * float(area_diam) * float(area_diam)
             print(f'The Answer Is: {area_answer} square unit(s)')
@@ -115,20 +115,20 @@ elif action == "area" or action == "a":
             paral_base = input("What is the base of the parallelogram? ")
             paral_area = float(paral_height)*float(paral_base)
             print(f'The Answer Is: {paral_area} sq unit(s)')
-elif action == "square root" or action == "s":
+while action == "square root" or action == "s":
     square_root = input(
-        "What is the number you want to find the square root of? ")
-    if square_root == "quit":
+        "What is the number you want to find the square root of? Press Q to quit. ")
+    if square_root == "quit" or square_root == "q":
         exit()
     else:
         squ_root = sqrt(float(square_root))
         print(f'The Answer is: {squ_root}')
-elif action == "cube root" or action == "cr":
+while action == "cube root" or action == "cr":
     cube_root = input(
         "What is the number that you want me to find the cube root of? ")
     cube_root_answer = float(cube_root) ** (1/3)
     print(f'The Answer Is: {cube_root_answer}')
-elif action == "pythagorean theorem" or action == "pt":
+while action == "pythagorean theorem" or action == "pt":
     altitude__y_or_no = input("Do you have the altitude? ")
     base__y_or_no = input("Do you have the base? ")
     hypotenuse__y_or_no = input("Do you have the hypotenuse? ")
@@ -156,8 +156,8 @@ elif action == "pythagorean theorem" or action == "pt":
         print(f'The Answer Is: {answer}')
     elif hypotenuse__y_or_no == "yes" and altitude__y_or_no == "yes" and base__y_or_no == "yes":
         print("Why are you asking me if you already have all 3 sides?")
-elif action == "HCF" or action == "hcf":
-    hcf__fir_num = input("What is the first number? ")
+while action == "HCF" or action == "hcf":
+    hcf__fir_num = input("What is the first number? Press Q to quit. ")
     if hcf__fir_num == "quit" or hcf__fir_num == "q":
         exit()
     else:
@@ -167,5 +167,3 @@ elif action == "HCF" or action == "hcf":
     else:
         hcf_answer = gcd(int(hcf__fir_num), int(hcf__sec_num))
     print(f'The Answer Is {hcf_answer}')
-else:
-    print("Try running 'help'")
