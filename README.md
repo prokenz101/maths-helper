@@ -24,6 +24,8 @@ For `Pythagorean Theorem` (This is the most complex but still pretty easy) you g
 
 For `HCF` just type in 2 numbers and it should output the HCF of those 2 numbers. This is fairly new and may have some bugs so L I guess.
 
+If you would like to go back to the previous question that the script asked, just type `..`, similar to changing directories in terminal.
+
 You can also `quit` at any point while using the script if you would like to stop. Just type `quit`.
 
 ## Examples
@@ -78,6 +80,14 @@ What do you want me to do? perimeter
 Square or Rectangle or Circle? circle
 What is the radius of the circle? 10
 The Answer Is: 314.1592653589793
+*Program Exits*
+```
+Or
+
+```
+What do you want me to do? perimeter
+Square or Rectangle or Circle or Triangle or Parallelogram? ..
+(It goes back to it's old question.) What do you want me to do? q ("quit")
 *Program Exits*
 ```
 
