@@ -215,3 +215,17 @@ while app_state == "active":
         else:
             hcf_answer = gcd(int(hcf__fir_num), int(hcf__sec_num))
         print(f'The Answer Is {hcf_answer}')
+    while action == "LCM" or action == "lcm":
+        lcm_num_1 = input("What is the first number? ")
+        if lcm_num_1 == "quit" or lcm_num_1 == "q":
+            exit()
+        elif lcm_num_1 == "..":
+            break
+        lcm_num_2 = input("What is the second number? ")
+        if lcm_num_2 == "quit" or lcm_num_2 == "q":
+            exit()
+        elif lcm_num_2 == "..":
+            break
+        lcm_hcf = gcd(int(lcm_num_1), int(lcm_num_2))
+        lcm = int(lcm_num_1) * int(lcm_num_2)/int(lcm_hcf)
+        print(f'The Answer Is: {lcm}')

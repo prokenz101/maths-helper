@@ -22,7 +22,9 @@ For `Square Root`, `Square` and `Cube Root` it's basically just the same thing, 
 
 For `Pythagorean Theorem` (This is the most complex but still pretty easy) you gotta input the state of the 3 sides of the triangle. Basically defining whether it's there or not, You do this using `yes` or `no`. Once the script gets this info, it will ask you the numbers according to the presence of each side of the triangle. If you dont know what the altitude is, then it's not going to ask you what it is. Once you do this, the answer will be outputted in square root(obviously). If hypotenuse is there, then make sure that the value is larger than the base/altitude otherwise it just wont make sense. And also, don't try and fake it out by saying that you have all 3 sides, It Knows.
 
-For `HCF` just type in 2 numbers and it should output the HCF of those 2 numbers. This is fairly new and may have some bugs so L I guess.
+For `HCF` just type in 2 numbers and it should output the HCF of those 2 numbers. 
+
+For `LCM` just type in 2 numbers and it should output the LCM of those 2 numbers. This is fairly new and may have some bugs so L I guess.
 
 If you would like to go back to the previous question that the script asked, just type `..`, similar to changing directories in terminal.
 
@@ -41,7 +43,7 @@ Or
 
 ```
 What do you want me to do? area
-Square or Rectangle? square
+Square or Rectangle or Circle or Triangle or Parallelogram? square
 What is the side of the square? 6
 The Answer is: 36
 *Program Exits*
@@ -58,7 +60,7 @@ Or
 
 ```
 What do you want me to do? perimeter
-Square or Rectangle? quit
+Square or Rectangle or Circle or Triangle or Parallelogram? quit
 *Program Exits*
 ```
 Or
@@ -77,7 +79,7 @@ Or
 
 ```
 What do you want me to do? perimeter
-Square or Rectangle or Circle? circle
+Square or Rectangle or Circle or Triangle or Parallelogram? circle
 What is the radius of the circle? 10
 The Answer Is: 314.1592653589793
 *Program Exits*
