@@ -1,4 +1,76 @@
 from math import pi, sqrt, gcd
+
+
+def get_float(message):
+    val = input(message)
+    while not val.isnumeric():
+        print("you suck loser go and die in hell for giving me something that i wont accept")
+        val = input(message)
+    print("heres the value back idk man")
+    return val
+
+
+def addition(first, second):
+    answer = float(first) + float(second)
+    print(f'The Answer Is: {answer}')
+
+
+def subtraction(first, second):
+    answer = float(first) - float(second)
+    print(f'The Answer Is: {answer}')
+
+
+def multiplication(first, second):
+    answer = float(first) * float(second)
+    print(f'The Answer Is: {answer}')
+
+
+def division(first, second):
+    answer = float(first) / float(second)
+    print(f'The Answer Is: {answer}')
+
+
+def remainder(first, second):
+    answer = float(first) % float(second)
+    print(f'The Answer Is: {answer}')
+
+
+def perimeter_rectangle(first, second):
+    peri_answer = (float(first) + float(second))*2
+    print(f'The Answer Is: {peri_answer} unit(s)')
+
+
+def perimeter_square(first):
+    peri_answer = float(first)*4
+    print(f'The Answer Is: {peri_answer} unit(s)')
+
+
+def perimeter_circle(first):
+    peri_answer = (pi * 2) * float(first)
+    print(f'The Answer Is: {peri_answer} unit(s)')
+
+
+def perimeter_triangle(first, second, third):
+    peri_answer = (float(second) + float(third)) + float(first)
+    print(f'The Answer Is: {peri_answer} unit(s)')
+
+
+def perimeter_parallelogram(first, second):
+    peri_answer = 2 * (float(first) + float(second))
+    print(f'The Answer Is: {peri_answer} unit(s)')
+
+
+def area_rectangle(first, second):
+    area_answer = float(first) * float(second)
+    print(f'The Answer Is: {area_answer} unit(s)')
+
+
+def area_square(first):
+    area_answer = float(first) * float(first)
+    print(f'The Answer Is: {area_answer} unit(s)')
+
+
+#def area_circle(first):
 app_state = "active"
 while app_state == "active":
     action = input("What do you want me to do? ")
@@ -27,20 +99,19 @@ while app_state == "active":
             exit()
         answer = 0
         if operation == "+":
-            answer = float(num1) + float(num2)
-            print('Answer is: ' + str(answer))
+            try:
+                addition(num1, num2)
+            except ValueError:
+                print("you entered something wrong noob idiot dumb ass stupid")
+
         elif operation == "-":
-            answer = float(num1) - float(num2)
-            print('Answer is: ' + str(answer))
+            subtraction(num1, num2)
         elif operation == "*":
-            answer = float(num1) * float(num2)
-            print('Answer is: ' + str(answer))
+            multiplication(num1, num2)
         elif operation == "/":
-            answer = float(num1) / float(num2)
-            print('Answer is: ' + str(answer))
+            division(num1, num2)
         elif operation == "%":
-            answer = float(num1) % float(num2)
-            print('Answer is: ' + str(answer))
+            remainder(num1, num2)
     while action == "perimeter" or action == "p":
         peri_answer = 0
         rec_or_squ_or_cir_or_tria_or_paral = input(
@@ -60,35 +131,50 @@ while app_state == "active":
                 exit()
             elif rec_brea == "..":
                 break
-            peri_answer = 2 * (float(rec_leng) + float(rec_brea))
-            print(f'The Answer is: {peri_answer} units')
+            perimeter_rectangle(rec_leng, rec_brea)
         while rec_or_squ_or_cir_or_tria_or_paral == "square":
             squ_side = input("What is the side of the square? ")
             if squ_side == "quit" or squ_side == "q":
                 exit()
             elif squ_side == "..":
                 break
-            peri_answer = float(squ_side) * 4
-            print("The Answer is: " + str(peri_answer)+(" units"))
+            perimeter_square(squ_side)
         while rec_or_squ_or_cir_or_tria_or_paral == "circle":
             cir_radi = input("What is the radius of the circle? ")
             if cir_radi == "quit" or cir_radi == "q":
                 exit()
             elif cir_radi == "..":
                 break
-            peri_answer = pi * float(cir_radi) * float(cir_radi)
-            print(f'The Answer Is: {peri_answer}')
+            perimeter_circle(cir_radi)
         while rec_or_squ_or_cir_or_tria_or_paral == "triangle":
             tria_base_peri = input("What is the base of the triangle? ")
+            if tria_base_peri == "quit" or tria_base_peri == "q":
+                exit()
+            elif tria_base_peri == "..":
+                break
             tria_side_peri = input("What is the side of the triangle? ")
-            tria_peri = float(tria_base_peri) + \
-                float(tria_side_peri) + float(tria_side_peri)
-            print(f'The Answer Is: {tria_peri}')
+            if tria_side_peri == "quit" or tria_side_peri == "q":
+                exit()
+            elif tria_side_peri == "..":
+                break
+            tria_side_peri_2 = input("What is the side of the triangle(2)? ")
+            if tria_side_peri_2 == "quit" or tria_side_peri_2 == "q":
+                exit()
+            elif tria_side_peri == "..":
+                break
+            perimeter_triangle(tria_base_peri, tria_side_peri, tria_side_peri_2)
         while rec_or_squ_or_cir_or_tria_or_paral == "parallelogram":
             paral_base_peri = input("What is the base of the parallelogram? ")
+            if paral_base_peri == "quit" or paral_base_peri == "q":
+                exit()
+            elif paral_base_peri == "..":
+                break
             paral_side_peri = input("What is the side of the parallelogram? ")
-            paral_peri = 2*(float(paral_base_peri) + float(paral_side_peri))
-            print(f'The Answer Is: {paral_peri}')
+            if paral_side_peri == "quit" or paral_base_peri == "q":
+                exit()
+            elif paral_side_peri == "..":
+                break
+            perimeter_parallelogram(paral_base_peri, paral_side_peri)
     while action == "area" or action == "a":
         area_answer = 0
         area__rec_or_squ_or_cir_or_tria_or_paral = input(
@@ -108,7 +194,8 @@ while app_state == "active":
                     exit()
                 elif area__rec_or_squ_or_cir_or_tria_or_paral == "..":
                     break
-                area__rec_brea = input("What is the breadth of the rectangle? ")
+                area__rec_brea = input(
+                    "What is the breadth of the rectangle? ")
                 if area__rec_brea == "quit" or area__rec_brea == "q":
                     exit()
                 elif area__rec_brea == "..":
@@ -137,7 +224,8 @@ while app_state == "active":
                 tria_area = (float(tria_height)*float(tria_base))/2
                 print(f'The Answer Is: {tria_area} sq unit(s)')
             elif area__rec_or_squ_or_cir_or_tria_or_paral == "parallelogram":
-                paral_height = input("What is the height of the parallelogram? ")
+                paral_height = input(
+                    "What is the height of the parallelogram? ")
                 paral_base = input("What is the base of the parallelogram? ")
                 paral_area = float(paral_height)*float(paral_base)
                 print(f'The Answer Is: {paral_area} sq unit(s)')
@@ -188,15 +276,15 @@ while app_state == "active":
             break
         if altitude__y_or_no == "yes" and base__y_or_no == "yes" and hypotenuse__y_or_no == "no":
             answer = sqrt((float(altitude) * float(altitude)) +
-                        (float(base) * float(base)))
+                          (float(base) * float(base)))
             print(f'The Answer Is: {answer}')
         elif hypotenuse__y_or_no == "yes" and base__y_or_no == "yes" and altitude__y_or_no == "no":
             answer = sqrt((float(hypotenuse) * float(hypotenuse)) -
-                        (float(base) * float(base)))
+                          (float(base) * float(base)))
             print(f'The Answer Is: {answer}')
         elif hypotenuse__y_or_no == "yes" and altitude__y_or_no == "yes" and base__y_or_no == "no":
             answer = sqrt((float(hypotenuse) * float(hypotenuse)) -
-                        (float(altitude) * float(altitude)))
+                          (float(altitude) * float(altitude)))
             print(f'The Answer Is: {answer}')
         elif hypotenuse__y_or_no == "yes" and altitude__y_or_no == "yes" and base__y_or_no == "yes":
             print("Why are you asking me if you already have all 3 sides?")
