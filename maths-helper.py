@@ -4,73 +4,120 @@ from math import pi, sqrt, gcd
 def get_float(message):
     val = input(message)
     while not val.isnumeric():
-        print("you suck loser go and die in hell for giving me something that i wont accept")
+        print(
+            "you suck loser go and die in hell for giving me something that i wont accept")
         val = input(message)
     print("heres the value back idk man")
     return val
 
 
-def addition(first, second):
-    answer = float(first) + float(second)
+def addition(num_1, num_2):
+    num_1 = input("What is the first number? ")
+    if num_1 == "quit" or num_1 == "q":
+        exit()
+    num_2 = input("What is the second number? ")
+    if num_2 == "quit" or num_1 == "q":
+        exit()
+    answer = float(num_1) + float(num_2)
     print(f'The Answer Is: {answer}')
 
 
 def subtraction(first, second):
-    answer = float(first) - float(second)
+    num_1 = input("What is the first number? ")
+    if num_1 == "quit" or num_1 == "q":
+        exit()
+    num_2 = input("What is the second number? ")
+    if num_2 == "quit" or num_1 == "q":
+        exit()
+    answer = float(num_1) - float(num_2)
     print(f'The Answer Is: {answer}')
 
 
 def multiplication(first, second):
-    answer = float(first) * float(second)
+    num_1 = input("What is the first number? ")
+    if num_1 == "quit" or num_1 == "q":
+        exit()
+    num_2 = input("What is the second number? ")
+    if num_2 == "quit" or num_1 == "q":
+        exit()
+    answer = float(num_1) * float(num_2)
     print(f'The Answer Is: {answer}')
 
 
 def division(first, second):
-    answer = float(first) / float(second)
+    num_1 = input("What is the first number? ")
+    if num_1 == "quit" or num_1 == "q":
+        exit()
+    num_2 = input("What is the second number? ")
+    if num_2 == "quit" or num_1 == "q":
+        exit()
+    answer = float(num_1) / float(num_2)
     print(f'The Answer Is: {answer}')
 
 
 def remainder(first, second):
-    answer = float(first) % float(second)
+    num_1 = input("What is the first number? ")
+    if num_1 == "quit" or num_1 == "q":
+        exit()
+    num_2 = input("What is the second number? ")
+    if num_2 == "quit" or num_1 == "q":
+        exit()
+    answer = float(num_1) % float(num_2)
     print(f'The Answer Is: {answer}')
 
 
-def perimeter_rectangle(first, second):
-    peri_answer = (float(first) + float(second))*2
+def perimeter_rectangle(rec_leng, rec_brea):
+    rec_leng = input("What is the length of the rectangle? ")
+    if rec_leng == "quit" or rec_leng == "q":
+        exit()
+    rec_brea = input("What is the breadth of the rectangle? ")
+    if rec_brea == "quit" or rec_brea == "q":
+        exit()
+    peri_answer = (float(rec_leng) + float(rec_brea))*2
     print(f'The Answer Is: {peri_answer} unit(s)')
 
 
-def perimeter_square(first):
-    peri_answer = float(first)*4
+def perimeter_square(peri_squ_side):
+    peri_squ_side = input("What is the side of the square? ")
+    if peri_squ_side == "quit" or peri_squ_side == "q":
+        exit()
+    peri_answer = float(peri_squ_side)*4
     print(f'The Answer Is: {peri_answer} unit(s)')
 
 
-def perimeter_circle(first):
-    peri_answer = (pi * 2) * float(first)
+def perimeter_circle(cir_radi):
+    cir_radi = input("What is the radius of the circle? ")
+    if cir_radi == "quit" or cir_radi == "q":
+        exit()
+    peri_answer = (pi * 2) * float(cir_radi)
     print(f'The Answer Is: {peri_answer} unit(s)')
 
 
-def perimeter_triangle(first, second, third):
-    peri_answer = (float(second) + float(third)) + float(first)
+def perimeter_triangle(tria_peri_side_1, tria_base_peri, tria_peri_side_2):
+    tria_peri_side_1 = input("What is the side of the triangle? ")
+    if tria_peri_side_1 == "quit" or tria_peri_side_1 == "q":
+        exit()
+    tria_base_peri = input("What is the base of the triangle? ")
+    if tria_base_peri == "quit" or tria_base_peri == "q":
+        exit()
+    tria_peri_side_2 = input("What is the side of the triangle(2)? ")
+    if tria_peri_side_2 == "quit" or tria_peri_side_2 == "q":
+        exit()
+    peri_answer = (float(tria_base_peri) + float(tria_peri_side_2)) + float(tria_peri_side_1)
     print(f'The Answer Is: {peri_answer} unit(s)')
 
 
-def perimeter_parallelogram(first, second):
-    peri_answer = 2 * (float(first) + float(second))
+def perimeter_parallelogram(paral_base_peri, paral_side_peri):
+    paral_base_peri = input("What is the base of the parallelogram? ")
+    if paral_base_peri == "quit" or paral_base_peri== "q":
+        exit()
+    paral_side_peri = input("What is the side of the parallelogram? ")
+    if paral_side_peri == "quit" or paral_side_peri == "q":
+        exit()
+    peri_answer = 2 * (float(paral_base_peri) + float(paral_side_peri))
     print(f'The Answer Is: {peri_answer} unit(s)')
 
 
-def area_rectangle(first, second):
-    area_answer = float(first) * float(second)
-    print(f'The Answer Is: {area_answer} unit(s)')
-
-
-def area_square(first):
-    area_answer = float(first) * float(first)
-    print(f'The Answer Is: {area_answer} unit(s)')
-
-
-#def area_circle(first):
 app_state = "active"
 while app_state == "active":
     action = input("What do you want me to do? ")
@@ -85,33 +132,44 @@ while app_state == "active":
     if action == "commands":
         for displayed_commands in useable_commands:
             print(displayed_commands)
+
+   # Calculator
+
     while action == "calculator" or action == "c":
         operation = input("Operation? Press Q to quit. ")
-        if operation == "quit" or operation == "q":
-            exit()
         if operation == "..":
             break
-        num1 = input("What is the first number? ")
-        if num1 == "quit":
-            exit()
-        num2 = input("What is the second number? ")
-        if num2 == "quit":
-            exit()
         answer = 0
+        num_1 = None
+        num_2 = None
         if operation == "+":
             try:
-                addition(num1, num2)
+                addition(num_1, num_2)
             except ValueError:
-                print("you entered something wrong noob idiot dumb ass stupid")
-
+                print("Please enter a number, and not anything else. Press Q to quit.")
         elif operation == "-":
-            subtraction(num1, num2)
+            try:
+                subtraction(num_1, num_2)
+            except ValueError:
+                print("Please enter a number, and not anything else. Press Q to quit.")
         elif operation == "*":
-            multiplication(num1, num2)
+            try:    
+                multiplication(num_1, num_2)
+            except ValueError:
+                print("Please enter a number, and not anything else. Press Q to quit.")
         elif operation == "/":
-            division(num1, num2)
+            try:
+                division(num_1, num_2)
+            except ValueError:
+                print("Please enter a number, and not anything else. Press Q to quit.")
         elif operation == "%":
-            remainder(num1, num2)
+            try:    
+                remainder(num_1, num_2)
+            except ValueError:
+                print("Please enter a number, and not anything else. Press Q to quit.")
+
+    # Perimeter
+
     while action == "perimeter" or action == "p":
         peri_answer = 0
         rec_or_squ_or_cir_or_tria_or_paral = input(
@@ -121,60 +179,50 @@ while app_state == "active":
         elif rec_or_squ_or_cir_or_tria_or_paral == "..":
             break
         while rec_or_squ_or_cir_or_tria_or_paral == "rectangle":
-            rec_leng = input("What is the length of the rectangle? ")
-            if rec_leng == "quit" or rec_leng == "q":
-                exit()
-            elif rec_leng == "..":
+            if rec_or_squ_or_cir_or_tria_or_paral == "..":
                 break
-            rec_brea = input("What is the breadth of the rectangle? ")
-            if rec_brea == "quit" or rec_brea == "q":
-                exit()
-            elif rec_brea == "..":
-                break
-            perimeter_rectangle(rec_leng, rec_brea)
+            rec_leng = None
+            rec_brea = None
+            try:
+                perimeter_rectangle(rec_leng, rec_brea)
+            except ValueError:
+                print("Please enter a number, and not anything else. Press Q to quit.")
         while rec_or_squ_or_cir_or_tria_or_paral == "square":
-            squ_side = input("What is the side of the square? ")
-            if squ_side == "quit" or squ_side == "q":
-                exit()
-            elif squ_side == "..":
+            if rec_or_squ_or_cir_or_tria_or_paral == "..":
                 break
-            perimeter_square(squ_side)
+            peri_squ_side = None
+            try:
+                perimeter_square(peri_squ_side)
+            except ValueError:
+                print("Please enter a number, and not anything else. Press Q to quit.")
         while rec_or_squ_or_cir_or_tria_or_paral == "circle":
-            cir_radi = input("What is the radius of the circle? ")
-            if cir_radi == "quit" or cir_radi == "q":
-                exit()
-            elif cir_radi == "..":
+            if rec_or_squ_or_cir_or_tria_or_paral == "..":
                 break
-            perimeter_circle(cir_radi)
+            cir_radi = None
+            try:
+                perimeter_circle(cir_radi)
+            except ValueError:
+                print("Please enter a number, and not anything else. Press Q to quit.")
         while rec_or_squ_or_cir_or_tria_or_paral == "triangle":
-            tria_base_peri = input("What is the base of the triangle? ")
-            if tria_base_peri == "quit" or tria_base_peri == "q":
-                exit()
-            elif tria_base_peri == "..":
+            if rec_or_squ_or_cir_or_tria_or_paral == "..":
                 break
-            tria_side_peri = input("What is the side of the triangle? ")
-            if tria_side_peri == "quit" or tria_side_peri == "q":
-                exit()
-            elif tria_side_peri == "..":
-                break
-            tria_side_peri_2 = input("What is the side of the triangle(2)? ")
-            if tria_side_peri_2 == "quit" or tria_side_peri_2 == "q":
-                exit()
-            elif tria_side_peri == "..":
-                break
-            perimeter_triangle(tria_base_peri, tria_side_peri, tria_side_peri_2)
+            tria_peri_side_1 = None
+            tria_base_peri = None
+            tria_peri_side_2 = None
+            try:
+                perimeter_triangle(
+                tria_base_peri, tria_peri_side_1, tria_peri_side_2)
+            except ValueError:
+                print("Please enter a number, and not anything else. Press Q to quit.")
         while rec_or_squ_or_cir_or_tria_or_paral == "parallelogram":
-            paral_base_peri = input("What is the base of the parallelogram? ")
-            if paral_base_peri == "quit" or paral_base_peri == "q":
-                exit()
-            elif paral_base_peri == "..":
+            if rec_or_squ_or_cir_or_tria_or_paral == "..":
                 break
-            paral_side_peri = input("What is the side of the parallelogram? ")
-            if paral_side_peri == "quit" or paral_base_peri == "q":
-                exit()
-            elif paral_side_peri == "..":
-                break
-            perimeter_parallelogram(paral_base_peri, paral_side_peri)
+            paral_side_peri = None
+            paral_base_peri = None
+            try:
+                perimeter_parallelogram(paral_base_peri, paral_side_peri)
+            except ValueError:
+                print("Please enter a number, and not anything else. Press Q to quit.")
     while action == "area" or action == "a":
         area_answer = 0
         area__rec_or_squ_or_cir_or_tria_or_paral = input(
