@@ -5,6 +5,7 @@ quit_list = [
     "exit"
 ]
 
+
 def get_float(message):
     while True:
         x = input(message)
@@ -26,7 +27,7 @@ def addition(first, second):
 
 def subtraction(first, second):
     first = get_float("What is the first number? ")
-    num_2 = get_float("What is the second number? ")
+    second = get_float("What is the second number? ")
     answer = first - second
     print(f'The Answer Is: {answer}')
 
@@ -121,15 +122,56 @@ def area_parallelogram(first, second):
 
 
 def square_root(first):
-    first = get_float("What is the number that you want me to find the square root of? ")
+    first = get_float(
+        "What is the number that you want me to find the square root of? ")
     square_root_answer = sqrt(first)
     print(f'The Answer Is: {square_root_answer}')
 
 
 def cube_root(first):
-    first = get_float("What is the number that you want me to find the cube root of? ")
+    first = get_float(
+        "What is the number that you want me to find the cube root of? ")
     cube_root_answer = first ** (1/3)
     print(f'The Answer Is: {cube_root_answer}')
+
+
+def hyp(first, second):
+    first = get_float("What is the altitude? ")
+    second = get_float("What is the base? ")
+    hyp_answer = sqrt((float(first) * float(first)) +
+                      (float(second) * float(second)))
+    print(f'The Answer Is: {hyp_answer}')
+
+
+def alt(first, second):
+    first = get_float("What is the hypotenuse? ")
+    second = get_float("What is the base? ")
+    alt_answer = sqrt((float(first) * float(first)) -
+                      (float(second) * float(second)))
+    print(f'The Answer Is: {alt_answer}')
+
+
+def base(first, second):
+    first = get_float("What is the hypotenuse? ")
+    second = get_float("What is the altitude? ")
+    base_answer = sqrt((float(first) * float(first)) -
+                       (float(second) * float(second)))
+    print(f'The Answer Is: {base_answer}')
+
+
+def hcf(first, second):
+    first = get_float("What is the first number? ")
+    second = get_float("What is the second number? ")
+    hcf_answer = gcd(int(first), int(second))
+    print(f'The Answer Is: {hcf_answer}')
+
+
+def lcm(first, second):
+    first = get_float("What is the first number? ")
+    second = get_float("What is the second number? ")
+    third = gcd(int(first), int(second))
+    lcm = int(first) * int(second) / int(third)
+    print(f'The Answer Is: {lcm}')
 
 
 app_state = "active"
@@ -149,12 +191,17 @@ while app_state == "active":
 
    # Calculator
 
-    while action.lower() in ["calculator", "c", "69"]:
+    while action.lower() in ["calculator", "c"]:
         operation = input("Operation? Press Q to quit. ")
         if operation.lower() in quit_list:
             exit()
-        if operation == "..":
+        elif operation == "..":
             break
+        elif operation == "commands":
+            useable_commands = [
+                'The Useable Commands are:', '+', '-', '*', '/', '%']
+            for displayed_commands in useable_commands:
+                print(displayed_commands)
         answer = None
         num_1 = None
         num_2 = None
@@ -286,80 +333,37 @@ while app_state == "active":
         cube_root_num = None
         cube_root(cube_root_num)
 
-    # Pythagorean Theorem
+    # Hypotenuse
 
-    while action == "pythagorean theorem" or action == "pt":
-        altitude__y_or_no = input("Do you have the altitude? ")
-        if altitude__y_or_no == "quit" or altitude__y_or_no == "q":
-            exit()
-        base__y_or_no = input("Do you have the base? ")
-        if base__y_or_no == "quit" or base__y_or_no == "q":
-            exit()
-        hypotenuse__y_or_no = input("Do you have the hypotenuse? ")
-        if hypotenuse__y_or_no == "quit" or hypotenuse__y_or_no == "q":
-            exit()
-        answer = None
-        altitude = None
-        base = None
-        hypotenuse = None
-        if altitude__y_or_no == "yes":
-            altitude = input("What is the altitude? ")
-        elif altitude == "..":
-            break
-        if base__y_or_no == "yes":
-            base = input("What is the base? ")
-        elif base == "..":
-            break
-        if hypotenuse__y_or_no == "yes":
-            hypotenuse = input("What is the hypotenuse? ")
-        elif hypotenuse == "..":
-            break
-        if altitude__y_or_no == "yes" and base__y_or_no == "yes" and hypotenuse__y_or_no == "no":
-            answer = sqrt((float(altitude) * float(altitude)) +
-                          (float(base) * float(base)))
-            print(f'The Answer Is: {answer}')
-        elif hypotenuse__y_or_no == "yes" and base__y_or_no == "yes" and altitude__y_or_no == "no":
-            answer = sqrt((float(hypotenuse) * float(hypotenuse)) -
-                          (float(base) * float(base)))
-            print(f'The Answer Is: {answer}')
-        elif hypotenuse__y_or_no == "yes" and altitude__y_or_no == "yes" and base__y_or_no == "no":
-            answer = sqrt((float(hypotenuse) * float(hypotenuse)) -
-                          (float(altitude) * float(altitude)))
-            print(f'The Answer Is: {answer}')
-        elif hypotenuse__y_or_no == "yes" and altitude__y_or_no == "yes" and base__y_or_no == "yes":
-            print("Why are you asking me if you already have all 3 sides?")
+    while action == "hypotenuse" or action == "hyp":
+        hyp_num_1 = None
+        hyp_num_2 = None
+        hyp(hyp_num_1, hyp_num_2)
+
+    # Altitude
+
+    while action == "altitude" or action == "alt":
+        alt_num_1 = None
+        alt_num_2 = None
+        alt(alt_num_1, alt_num_2)
+
+    # Base
+
+    while action == "base":
+        base_num_1 = None
+        base_num_2 = None
+        base(base_num_1, base_num_2)
 
     # HCF
 
     while action == "HCF" or action == "hcf":
-        hcf__fir_num = input("What is the first number? Press Q to quit. ")
-        if hcf__fir_num == "quit" or hcf__fir_num == "q":
-            exit()
-        elif hcf__fir_num == "..":
-            break
-        else:
-            hcf__sec_num = input("What is the second number? ")
-        if hcf__sec_num == "quit" or hcf__sec_num == "q":
-            exit()
-        elif hcf__sec_num == "..":
-            break
-        else:
-            hcf_answer = gcd(int(hcf__fir_num), int(hcf__sec_num))
-        print(f'The Answer Is {hcf_answer}')
+        hcf_num_1 = None
+        hcf_num_2 = None
+        hcf(hcf_num_1, hcf_num_2)
 
     # LCM
 
     while action == "LCM" or action == "lcm":
-        lcm_num_1 = input("What is the first number? ")
-        if lcm_num_1 == "quit" or lcm_num_1 == "q":
-            exit()
-        elif lcm_num_1 == "..":
-            break
-        lcm_num_2 = input("What is the second number? ")
-        if lcm_num_2 == "quit" or lcm_num_2 == "q":
-            exit()
-        elif lcm_num_2 == "..":
-            break
-        lcm_hcf = gcd(int(lcm_num_1), int(lcm_num_2))
-        lcm = int(lcm_num_1) * int(lcm_num_2)/int(lcm_hcf)
-        print(f'The Answer Is: {lcm}')
+        lcm_num_1 = None
+        lcm_num_2 = None
+        lcm(lcm_num_1, lcm_num_2)
