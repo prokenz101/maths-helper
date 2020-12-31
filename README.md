@@ -3,28 +3,48 @@
 A simple python script that helps you with basic math questions.
 
 ## It helps you with:
-- Basic Operations
+- Calculator
+   Basic Operations
     - Addition
     - Subtraction
     - Multiplication
     - Division
-- Square and Square Root
+- Square and Cube Root
+    Random Number
+    - 24 (Example)
 - Perimeter and Area
+    Shapes
+    - Rectangle
+    - Square
+    - Circle
+    - Triangle
+    - Paralellogram
+- Hypotenuse, Altitude and Base
+    2 Random Numbers
+    - 24 and 48 (Example)
+- LCM and HCF
+    2 Random Numbers
+    - 24 and 48 (Example)
+
 
 ## How to use the script
 
-When it asks for a command, Your options are `calculator`, `perimeter`, `area`, `square`, `square root`, `quit` and ` pythagorean theorem`.
+When it asks for a command, Your options are `calculator`, `perimeter`, `area`, `square`, `square root`, `cube root` `quit`, `hyp`, `alt`, `base`, `lcm`, `hcf`.
 The operations for `calculator` are `+` (Addition), `-` (Subtraction), `*` (Multiplication), `/` (Division) and `%` (Remainder).
 
 When it asks for shapes, your options are `Square`, `Rectangle`, `Circle`, `Triangle` and `Parallelogram`  length/breadth/side/radius/diameter/base in `perimeter` or `area` just input a random number I guess its not that hard.
 
 For `Square Root`, `Square` and `Cube Root` it's basically just the same thing, enter a number.
 
-For `Pythagorean Theorem` (This is the most complex but still pretty easy) you gotta input the state of the 3 sides of the triangle. Basically defining whether it's there or not, You do this using `yes` or `no`. Once the script gets this info, it will ask you the numbers according to the presence of each side of the triangle. If you dont know what the altitude is, then it's not going to ask you what it is. Once you do this, the answer will be outputted in square root(obviously). If hypotenuse is there, then make sure that the value is larger than the base/altitude otherwise it just wont make sense. And also, don't try and fake it out by saying that you have all 3 sides, It Knows.
+For `Hyp` (Hypotenuse), you can just input the altitude and base of the triangle and it should give you the hypotenuse of them.
+
+For `Alt` (Altitude), you can just input the hypotenuse and base of the triangle and it should give you the altitude of them.
+
+For `Base` you can just input the hypotenuse and the altitude of the triangle and it should give you the base of them.
 
 For `HCF` just type in 2 numbers and it should output the HCF of those 2 numbers. 
 
-For `LCM` just type in 2 numbers and it should output the LCM of those 2 numbers. This is fairly new and may have some bugs so L I guess.
+For `LCM` just type in 2 numbers and it should output the LCM of those 2 numbers. 
 
 If you would like to go back to the previous question that the script asked, just type `..`, similar to changing directories in terminal.
 
@@ -66,13 +86,10 @@ Square or Rectangle or Circle or Triangle or Parallelogram? quit
 Or
 
 ```
-What do you want me to do? pythagorean theorem
-Do you have the altitude? yes
-Do you have the base? yes
-Do you have the hypotenuse? no
-What is the altitude? 10
-What is the base? 5
-The Answer Is: 11.180339887498949
+What do you want me to do? hyp
+What is the altitude? 15
+What is the base? 15
+The Answer Is: 21.213203435596427
 *Program Exits*
 ```
 Or
