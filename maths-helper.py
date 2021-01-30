@@ -3,6 +3,8 @@ quit_list = [
     "quit",
     "q",
     "exit"
+    "back"
+    "leave"
 ]
 
 
@@ -121,6 +123,36 @@ def area_parallelogram(first, second):
     print(f'The Answer Is: {area_answer} square unit(s)')
 
 
+def vol_cuboid(first, second, third):
+    first = get_float("What is the length of the rectangle? ")
+    second = get_float("What is the breadth of the rectangle? ")
+    third = get_float("What is the height of the rectangle? ")
+    vol_answer = first * second * third
+    print(f'The Answer Is: {vol_answer} cubic unit(s)')
+
+
+def vol_cube(first):
+    first = get_float("What is the side of the square? ")
+    vol_answer = first * first * first
+    print(f'The Answer Is: {vol_answer} cubic unit(s)')
+
+
+def vol_sphere(first):
+    first = get_float("What is the radius of the circle? ")
+    vol_answer = (4/3)*pi*(first * first * first)
+    print(f'The Answer Is: {vol_answer} cubic unit(s)')
+
+
+def vol_triaprism(first, second, third, fourth):
+    first = get_float("What is the base side 1 of the triaprism? ")
+    second = get_float("What is the base side 2 of the triaprism? ")
+    third = get_float("What is the base side 3 of the triaprism? ")
+    fourth = get_float("What is the height of the triaprism? ")
+    vol_answer = ((1/4)*fourth) * sqrt((first + second + third) * (second +
+                                                                   third - first) * (third + first - second) * (first + second - third))
+    print(f'The Answer Is: {vol_answer} cubic unit(s)')
+
+
 def square_root(first):
     first = get_float(
         "What is the number that you want me to find the square root of? ")
@@ -189,6 +221,15 @@ while app_state == "active":
         for displayed_commands in useable_commands:
             print(displayed_commands)
 
+   # Fraction Calcultor
+
+    while action.lower() in ["fraction calculator", "fc"]:
+        f_operation = input("What is the operation? ")
+        if f_operation.lower() in quit_list:
+            exit()
+        elif f_operation == "..":
+            break
+
    # Calculator
 
     while action.lower() in ["calculator", "c"]:
@@ -206,120 +247,104 @@ while app_state == "active":
         num_1 = None
         num_2 = None
         if operation == "+":
-            try:
-                addition(num_1, num_2)
-            except ValueError:
-                print("Please enter a number, and not anything else. Press Q to quit.")
+            addition(num_1, num_2)
         elif operation == "-":
-            try:
-                subtraction(num_1, num_2)
-            except ValueError:
-                print("Please enter a number, and not anything else. Press Q to quit.")
+            subtraction(num_1, num_2)
         elif operation == "*":
-            try:
-                multiplication(num_1, num_2)
-            except ValueError:
-                print("Please enter a number, and not anything else. Press Q to quit.")
+            multiplication(num_1, num_2)
         elif operation == "/":
-            try:
-                division(num_1, num_2)
-            except ValueError:
-                print("Please enter a number, and not anything else. Press Q to quit.")
+            division(num_1, num_2)
         elif operation == "%":
-            try:
-                remainder(num_1, num_2)
-            except ValueError:
-                print("Please enter a number, and not anything else. Press Q to quit.")
-
+            remainder(num_1, num_2)
     # Perimeter
 
-    while action == "perimeter" or action == "p":
+    while action.lower() in ['perimeter', 'p']:
         peri_answer = None
-        rec_or_squ_or_cir_or_tria_or_paral = input(
+        peri__rec_squ_cir_tria_paral = input(
             "Square or Rectangle or Circle or Triangle or Parallelogram? Press Q to quit. ")
-        if rec_or_squ_or_cir_or_tria_or_paral == "quit" or rec_or_squ_or_cir_or_tria_or_paral == "q":
+        if peri__rec_squ_cir_tria_paral == "quit" or peri__rec_squ_cir_tria_paral == "q":
             exit()
-        elif rec_or_squ_or_cir_or_tria_or_paral == "..":
+        elif peri__rec_squ_cir_tria_paral == "..":
             break
-        while rec_or_squ_or_cir_or_tria_or_paral == "rectangle":
+        while peri__rec_squ_cir_tria_paral == "rectangle":
             rec_leng = None
             rec_brea = None
-            try:
-                perimeter_rectangle(rec_leng, rec_brea)
-            except ValueError:
-                print("Please enter a number, and not anything else. Press Q to quit.")
-        while rec_or_squ_or_cir_or_tria_or_paral == "square":
+            perimeter_rectangle(rec_leng, rec_brea)
+        while peri__rec_squ_cir_tria_paral == "square":
             peri_squ_side = None
-            try:
-                perimeter_square(peri_squ_side)
-            except ValueError:
-                print("Please enter a number, and not anything else. Press Q to quit.")
-        while rec_or_squ_or_cir_or_tria_or_paral == "circle":
+            perimeter_square(peri_squ_side)
+        while peri__rec_squ_cir_tria_paral == "circle":
             cir_radi = None
-            try:
-                perimeter_circle(cir_radi)
-            except ValueError:
-                print("Please enter a number, and not anything else. Press Q to quit.")
-        while rec_or_squ_or_cir_or_tria_or_paral == "triangle":
+            perimeter_circle(cir_radi)
+        while peri__rec_squ_cir_tria_paral == "triangle":
             tria_peri_side_1 = None
             tria_base_peri = None
             tria_peri_side_2 = None
-            try:
-                perimeter_triangle(
-                    tria_base_peri, tria_peri_side_1, tria_peri_side_2)
-            except ValueError:
-                print("Please enter a number, and not anything else. Press Q to quit.")
-        while rec_or_squ_or_cir_or_tria_or_paral == "parallelogram":
+            perimeter_triangle(
+                tria_base_peri, tria_peri_side_1, tria_peri_side_2)
+        while peri__rec_squ_cir_tria_paral == "parallelogram":
             paral_side_peri = None
             paral_base_peri = None
-            try:
-                perimeter_parallelogram(paral_base_peri, paral_side_peri)
-            except ValueError:
-                print("Please enter a number, and not anything else. Press Q to quit.")
+            perimeter_parallelogram(paral_base_peri, paral_side_peri)
 
     # Area
 
-    while action == "area" or action == "a":
+    while action.lower() in ['area', 'a']:
         area_answer = None
-        area__rec_or_squ_or_cir_or_tria_or_paral = input(
+        area__rec_squ_cir_tria_paral = input(
             "Square or Rectangle or Circle or Triangle or Parallelogram? Press Q to quit. ")
-        if area__rec_or_squ_or_cir_or_tria_or_paral == "quit" or area__rec_or_squ_or_cir_or_tria_or_paral == "q":
+        if area__rec_squ_cir_tria_paral == "quit" or area__rec_squ_cir_tria_paral == "q":
             exit()
-        elif area__rec_or_squ_or_cir_or_tria_or_paral == "..":
+        elif area__rec_squ_cir_tria_paral == "..":
             break
-        while area__rec_or_squ_or_cir_or_tria_or_paral == "rectangle":
+        while area__rec_squ_cir_tria_paral == "rectangle":
             area_rec_leng = None
             area_rec_brea = None
-            try:
-                area_rectangle(area_rec_leng, area_rec_brea)
-            except ValueError:
-                print("Please enter a number, and not anything else. Press Q to quit.")
-        while area__rec_or_squ_or_cir_or_tria_or_paral == "square":
+            area_rectangle(area_rec_leng, area_rec_brea)
+        while area__rec_squ_cir_tria_paral == "square":
             area_squ_side = None
-            try:
-                area_square(area_squ_side)
-            except ValueError:
-                print("Please enter a number, and not anything else. Press Q to quit.")
-        while area__rec_or_squ_or_cir_or_tria_or_paral == "circle":
+            area_square(area_squ_side)
+        while area__rec_squ_cir_tria_paral == "circle":
             area_cir_diam = None
-            try:
-                area_circle(area_cir_diam)
-            except ValueError:
-                print("Please enter a number, and not anything else. Press Q to quit.")
-        while area__rec_or_squ_or_cir_or_tria_or_paral == "triangle":
+            area_circle(area_cir_diam)
+        while area__rec_squ_cir_tria_paral == "triangle":
             area_tria_base = None
             area_tria_height = None
-            try:
-                area_triangle(area_tria_base, area_tria_height)
-            except ValueError:
-                print("Please enter a number, and not anything else. Press Q to quit.")
-        while area__rec_or_squ_or_cir_or_tria_or_paral == "parallelogram":
+            area_triangle(area_tria_base, area_tria_height)
+        while area__rec_squ_cir_tria_paral == "parallelogram":
             area_paral_base = None
             area_paral_height = None
-            try:
-                area_parallelogram(area_paral_base, area_paral_height)
-            except ValueError:
-                print("Please enter a number, and not anything else. Press Q to quit.")
+            area_parallelogram(area_paral_base, area_paral_height)
+
+    # Volume
+
+    while action.lower() in ['volume', 'v']:
+        vol_answer = None
+        vol__rec_squ_cir_tria_paral = input(
+            "Cube or Cuboid or Sphere or Triangular Prism? Press Q to quit. ")
+        if vol__rec_squ_cir_tria_paral.lower in quit_list:
+            exit()
+        elif vol__rec_squ_cir_tria_paral == "..":
+            break
+        while vol__rec_squ_cir_tria_paral == "cuboid":
+            vol_cuboid_length = None
+            vol_cuboid_breadth = None
+            vol_cuboid_height = None
+            vol_cuboid(vol_cuboid_length,
+                       vol_cuboid_breadth, vol_cuboid_height)
+        while vol__rec_squ_cir_tria_paral == "cube":
+            vol_cube_side = None
+            vol_cube(vol_cube_side)
+        while vol__rec_squ_cir_tria_paral == "sphere":
+            vol_sphere_radius = None
+            vol_sphere(vol_sphere_radius)
+        while vol__rec_squ_cir_tria_paral.lower() in ['triangular prism', 'tp']:
+            vol_triaprism_base1 = None
+            vol_triaprism_base2 = None
+            vol_triaprism_base3 = None
+            vol_triaprism_height = None
+            vol_triaprism(vol_triaprism_base1, vol_triaprism_base2,
+                          vol_triaprism_base3, vol_triaprism_height)
 
     # Square Root
 
