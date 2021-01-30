@@ -11,7 +11,7 @@ A simple python script that helps you with basic math questions.
     - Division
 - Square and Cube Root
     Random Number
-    - 24 (Example)
+    - 24
 - Perimeter and Area
     Shapes
     - Rectangle
@@ -19,20 +19,28 @@ A simple python script that helps you with basic math questions.
     - Circle
     - Triangle
     - Paralellogram
+- Volume
+    Shapes
+    - Cube
+    - Cuboid
+    - Sphere
+    - Triangular Prism
 - Hypotenuse, Altitude and Base
     2 Random Numbers
-    - 24 and 48 (Example)
+    - 24 and 48
 - LCM and HCF
     2 Random Numbers
-    - 24 and 48 (Example)
+    - 24 and 48
 
 
 ## How to use the script
 
-When it asks for a command, Your options are `calculator`, `perimeter`, `area`, `square`, `square root`, `cube root` `quit`, `hyp`, `alt`, `base`, `lcm`, `hcf`.
+When it asks for a command, Your options are `calculator`, `perimeter`, `area`, `volume`, `square`, `square root`, `cube root` `quit`, `hyp`, `alt`, `base`, `lcm`, `hcf`.
 The operations for `calculator` are `+` (Addition), `-` (Subtraction), `*` (Multiplication), `/` (Division) and `%` (Remainder).
 
-When it asks for shapes, your options are `Square`, `Rectangle`, `Circle`, `Triangle` and `Parallelogram`  length/breadth/side/radius/diameter/base in `perimeter` or `area` just input a random number I guess its not that hard.
+When it asks for shapes (in perimeter and area), your options are `Square`, `Rectangle`, `Circle`, `Triangle` and `Parallelogram`  length/breadth/side/radius/diameter/base in `perimeter` or `area` just input a random number I guess its not that hard.
+
+For `Volume`, based on the 3D object that you choose, you can input the numbers and it should work.
 
 For `Square Root`, `Square` and `Cube Root` it's basically just the same thing, enter a number.
 
@@ -81,6 +89,18 @@ Or
 ```
 What do you want me to do? perimeter
 Square or Rectangle or Circle or Triangle or Parallelogram? quit
+*Program Exits*
+```
+Or
+
+```
+What do you want me to do? volume
+Cube or Cuboid or Sphere or Triangular Prism? Press Q to quit. Triangular Prism (you can also use tp for short.)
+What is the base side 1 of the triaprism? 15
+What is the base side 2 of the triaprism? 15
+What is the base side 3 of the triaprism? 15
+What is the height of the triaprism? 15
+The Answer Is: 1461.4178688862403 cubic unit(s)
 *Program Exits*
 ```
 Or
