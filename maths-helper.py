@@ -392,30 +392,4 @@ while app_state == "active":
     while action == "LCM" or action == "lcm":
         lcm_num_1 = None
         lcm_num_2 = None
-        lcm(lcm_num_1, lcm_num_2)
-
-    # Quick Commands
-    
-    while action.startswith("qc calculator") or action.startswith("qc c"):
-        qc_question = action.split()
-        if qc_question[1] == qc_question[3] == "+":
-            qc_add_ans = float(qc_question[2]) + float(qc_question[4])
-            print(f'The Answer Is: {qc_add_ans}')
-            break
-        elif qc_question[1] == qc_question[3] == "-":
-            qc_subtract_ans = float(qc_question[2]) - float(qc_question[4])
-            print(f'The Answer Is: {qc_subtract_ans}')
-            break
-        elif qc_question[1] == qc_question[3] == "*":
-            qc_multiplicate_ans = float(qc_question[2]) * float(qc_question[4])
-            print(f'The Answer Is: {qc_multiplicate_ans}')
-            break
-        elif qc_question[1] == qc_question[3] == "/":
-            qc_divide_ans = float(qc_question[2]) / float(qc_question[4])
-            print(f'The Answer Is: {qc_divide_ans}')
-            break
-        elif qc_question[1] == qc_question[3] == "%":
-            qc_remainder_ans = float(qc_question[2]) % float(qc_question[4])
-            print(f'The Answer Is: {qc_remainder_ans}')
-            break
-            
+        lcm(lcm_num_1, lcm_num_2)        
